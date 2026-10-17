@@ -1,0 +1,5 @@
+# Source files: not used by the site, keep them out of the GitHub repo
+DMA_INAUGURATION.png
+src/
+*.mp4
+Untitled.mp3

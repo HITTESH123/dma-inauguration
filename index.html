@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>DMA Technologies — Inauguration &amp; Pooja</title>
+  <meta name="description" content="You are cordially invited to the Inauguration & Pooja Ceremony of the new DMA Technologies office — 19 October 2026, OMR, Thaiyur, Chengalpattu." />
+  <meta name="theme-color" content="#FFFAE6" />
+  <meta property="og:title" content="DMA Technologies — Inauguration & Pooja" />
+  <meta property="og:description" content="19.10.2026 · Plot No.177, Radiance, OMR, Thaiyur, Chengalpattu" />
+  <meta property="og:image" content="assets/img/invitation.png" />
+  <link rel="icon" type="image/png" href="assets/img/logo.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="is-locked">
+
+  <!-- ═════════ Opening gate ═════════ -->
+  <div class="gate" id="gate" role="dialog" aria-label="Open the invitation">
+    <div class="door door--left"><div class="door__panel"></div></div>
+    <div class="door door--right"><div class="door__panel"></div></div>
+    <div class="gate__center">
+      <div class="gate__seal">
+        <img src="assets/img/logo.png" alt="DMA Technologies" />
+      </div>
+      <p class="gate__kicker">With joy and gratitude</p>
+      <h1 class="gate__title">You are invited</h1>
+      <button class="btn btn--primary gate__btn" id="openBtn">
+        <span class="diya-icon" aria-hidden="true"></span>
+        Open Invitation
+      </button>
+      <button class="gate__silent" id="openSilentBtn">Open without music</button>
+    </div>
+  </div>
+
+  <canvas id="petals" aria-hidden="true"></canvas>
+
+  <!-- ═════════ Hero ═════════ -->
+  <header class="hero" id="top">
+    <div class="garland" aria-hidden="true"></div>
+    <img class="deco lotus-tl" src="assets/img/lotus-tl.png" alt="" aria-hidden="true" />
+    <img class="deco lotus-tr" src="assets/img/lotus-tr.png" alt="" aria-hidden="true" />
+    <img class="deco hang hang-l" src="assets/img/hang-left.png" alt="" aria-hidden="true" />
+    <img class="deco hang hang-r" src="assets/img/hang-right.png" alt="" aria-hidden="true" />
+
+    <div class="hero__inner">
+      <div class="hero__logo-wrap reveal">
+        <svg class="mandala" id="mandala" viewBox="-100 -100 200 200" aria-hidden="true"></svg>
+        <img class="hero__logo" src="assets/img/logo.png" alt="DMA Technologies" />
+      </div>
+
+      <p class="hero__invite reveal">
+        We cordially invite the Leadership &amp; CXO’s to attend<br class="br-lg" />
+        the auspicious Inauguration &amp; Pooja Ceremony of our new office
+      </p>
+
+      <h2 class="hero__title">
+        <span class="line reveal">DMA Technologies</span>
+        <span class="line reveal">Inauguration <em>&amp;</em> Pooja</span>
+      </h2>
+
+      <div class="ornament reveal" aria-hidden="true"><span></span><i>❖</i><span></span></div>
+
+      <dl class="hero__facts reveal">
+        <div><dt>Date &amp; Day</dt><dd>19.10.2026, <span data-bind="dayLabel"></span></dd></div>
+        <div><dt>Time</dt><dd data-bind="timeLabel"></dd></div>
+        <div><dt>Venue</dt><dd data-bind="venue"></dd></div>
+      </dl>
+
+      <div class="ornament reveal" aria-hidden="true"><span></span><i>❖</i><span></span></div>
+
+      <div class="countdown reveal" id="countdown" aria-live="polite">
+        <div class="cd"><span class="cd__n" data-cd="d">00</span><span class="cd__l">Days</span></div>
+        <div class="cd"><span class="cd__n" data-cd="h">00</span><span class="cd__l">Hours</span></div>
+        <div class="cd"><span class="cd__n" data-cd="m">00</span><span class="cd__l">Minutes</span></div>
+        <div class="cd"><span class="cd__n" data-cd="s">00</span><span class="cd__l">Seconds</span></div>
+      </div>
+      <p class="countdown__msg" id="countdownMsg" hidden></p>
+
+      <a href="#details" class="scroll-cue" aria-label="Scroll to details"><span></span></a>
+    </div>
+  </header>
+
+  <main>
+    <!-- ═════════ Details ═════════ -->
+    <section class="section" id="details">
+      <p class="eyebrow reveal">The Ceremony</p>
+      <h3 class="section__title reveal">Join us as we begin a new chapter</h3>
+
+      <div class="cards">
+        <article class="card reveal">
+          <div class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+          </div>
+          <h4>Date</h4>
+          <p class="card__big">19 October 2026</p>
+          <p data-bind="dayLabel"></p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </div>
+          <h4>Time</h4>
+          <p class="card__big" data-bind="timeLabel"></p>
+          <p>Indian Standard Time</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          </div>
+          <h4>Venue</h4>
+          <p class="card__big">Radiance, OMR</p>
+          <p>Plot No.177, Thaiyur,<br />Chengalpattu, Tamil Nadu</p>
+        </article>
+      </div>
+
+      <div class="actions reveal">
+        <a class="btn btn--primary" id="mapsBtn" target="_blank" rel="noopener">Get Directions</a>
+        <a class="btn btn--ghost" id="gcalBtn" target="_blank" rel="noopener">Add to Google Calendar</a>
+        <button class="btn btn--ghost" id="icsBtn">Download .ics</button>
+        <button class="btn btn--ghost" id="cardBtn">View Invitation Card</button>
+      </div>
+    </section>
+
+    <!-- ═════════ Programme ═════════ -->
+    <section class="section section--tint" id="programme">
+      <p class="eyebrow reveal">Order of Ceremonies</p>
+      <h3 class="section__title reveal">Moments of the day</h3>
+      <ol class="timeline" id="timeline"></ol>
+    </section>
+
+    <!-- ═════════ About ═════════ -->
+    <section class="section" id="about">
+      <p class="eyebrow reveal">About Us</p>
+      <h3 class="section__title reveal">Real-World AI, rooted in research</h3>
+      <p class="lead reveal">
+        DMA is an AI-first community incubated by IIT Madras Pravartak. It brings together researchers,
+        practitioners, and institutions to advance responsible and applied AI systems — operating at the
+        intersection of academic depth and real-world implementation.
+      </p>
+
+      <div class="pillars">
+        <article class="pillar reveal">
+          <span class="pillar__num">01</span>
+          <h4>Real-World AI</h4>
+          <p>Developing AI models from Responsible and Indigenous AI to Gen AI Observability, with proven research.</p>
+        </article>
+        <article class="pillar reveal">
+          <span class="pillar__num">02</span>
+          <h4>Incubated by IIT Madras Pravartak</h4>
+          <p>Rooted in one of India’s most respected deep-tech and innovation ecosystems.</p>
+        </article>
+        <article class="pillar reveal">
+          <span class="pillar__num">03</span>
+          <h4>National-level Guidance</h4>
+          <p>Guided by leadership across BharatGen and RBI advisory initiatives.</p>
+        </article>
+        <article class="pillar reveal">
+          <span class="pillar__num">04</span>
+          <h4>Built for Nation-Scale Impact</h4>
+          <p>Focused on creating foundational AI products, frameworks, and large-scale deployments.</p>
+        </article>
+      </div>
+
+      <div class="actions reveal">
+        <a class="btn btn--ghost" href="https://dmatech.in/" target="_blank" rel="noopener">Visit dmatech.in →</a>
+      </div>
+    </section>
+
+    <!-- ═════════ Closing ═════════ -->
+    <section class="closing" id="closing">
+      <div class="closing__inner">
+        <div class="ornament reveal" aria-hidden="true"><span></span><i>❖</i><span></span></div>
+        <p class="closing__quote reveal">Your gracious presence will make this occasion more sacred and joyful</p>
+        <p class="closing__sign reveal">— Team DMA Technologies</p>
+      </div>
+      <img class="closing__art" src="assets/img/closing.png" alt="" aria-hidden="true" />
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/img/logo.png" alt="DMA Technologies" class="footer__logo" />
+    <p><span data-bind="venue"></span></p>
+    <p><a data-bind-href="tel" data-bind="phone"></a> · <a href="https://dmatech.in/" target="_blank" rel="noopener">dmatech.in</a></p>
+    <p class="footer__legal">© 2026 DMA Technologies Private Limited. All rights reserved.</p>
+    <p class="footer__credit" id="musicCredit" hidden></p>
+  </footer>
+
+  <!-- Music control -->
+  <button class="music" id="musicBtn" aria-label="Play music" aria-pressed="false" hidden>
+    <span class="bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    <span class="music__label">Music</span>
+  </button>
+
+  <!-- Invitation lightbox -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" id="lightboxClose" aria-label="Close">×</button>
+    <figure>
+      <img src="assets/img/invitation.png" alt="DMA Technologies Inauguration & Pooja invitation card" />
+      <figcaption><a class="btn btn--primary" href="assets/img/invitation.png" download="DMA_Inauguration_Invitation.png">Download Card</a></figcaption>
+    </figure>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/music.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
